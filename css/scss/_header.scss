@@ -1,0 +1,159 @@
+header {
+    background: linear-gradient(275deg, 
+        rgba(76, 112, 222, 0.1) -9.26%, 
+        rgba(28, 156, 210, 0.1) 47.33%, 
+        rgba(15, 170, 163, 0.1) 105.11%);
+    padding-top: 44px;
+    
+    nav.container {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+
+        .left {
+            display: flex;
+            gap: 55px;
+
+            .logo {
+                img {
+                    width: 184px;
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+
+            ul.main-nav {
+                display: flex;
+                gap: 32px;
+                align-items: center;
+
+                @media (max-width: $tablet-screen) {
+                    display: none;
+                    position: absolute;
+                    top: 0px;
+                    left: 0;
+                    background: white;
+                    width: 100%;
+                    padding: 130px 32px 32px 32px;
+                }
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: #0D0F11;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 30.301px;
+                        letter-spacing: 0.494px; 
+                        display: inline-block;
+
+                        @media (max-width: $tablet-screen) {
+                            font-size: 32px;
+                            line-height: 60px;
+                        }
+
+                        &.dropdown {
+                            background: url(../assets/images/icons/chevron_down.svg) no-repeat right center;
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            gap: 21px;
+            align-items: center;
+
+            @media (max-width: $desktop-screen) {
+                display: none;
+            }
+
+            .btn {
+                &.demo {
+                    padding: 8px 15px;
+                }
+            }
+
+            a.login-link {
+                text-decoration: none;
+                color: var(--darks-dark-100, #0D0F11);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30.301px; /* 151.503% */
+                letter-spacing: 0.494px;
+            }
+        }
+
+        .hamburger-menu {
+            height: 30px;
+            cursor: pointer;
+            display: none;
+            opacity: 0.75;
+
+            @media (max-width: $tablet-screen) {
+                display: block;
+            }
+        }
+    }
+
+    // cta banner
+    .cta {
+        padding: 144px 32px 40px 32px;
+
+        @media (max-width: $mobile-screen) {
+            padding: 32px;
+        }
+
+        .details {
+            text-align: center;
+
+            h1 {
+                color: var(--darks-dark-100, #0D0F11);
+                text-align: center;
+                font-size: 64px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 65px;
+            }
+
+            h2 {
+                color: #0D0F11;
+                text-align: center;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+                margin-top: 13px;
+            }
+
+            .btn {
+                margin-top: 40px;
+                padding: 10px 38px;
+
+            }
+        }
+
+        .customer-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 58px;
+            margin-top: 145px;
+
+            @media (max-width: $mobile-screen) {
+                margin-top: 60px;
+            }
+
+            img {
+
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+section.try {
+    padding: 120px 0 162px 0;
+
+    @media (max-width: $mobile-screen) {
+        padding: 60px 0;
+    }
+
+    .container {
+        @media (max-width: $tablet-screen) {
+            padding: 0 16px;
+        }
+
+        .try-banner {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), linear-gradient(250deg, #27A5DB 0.13%, #2E5BA6 77.13%);
+            border-radius: 16px;
+            padding: 62px 28px 90px 65px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+
+            @media (max-width: $tablet-screen) {
+                flex-direction: column;
+                padding: 32px 32px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 92%;
+                height: 24px;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), linear-gradient(250deg, #27A5DB 0.13%, #2E5BA6 77.13%);
+                bottom: -23px;
+                border-bottom-left-radius: 16px;
+                border-bottom-right-radius: 16px;
+                opacity: 0.1;
+            }
+
+            .left {
+                @media (max-width: $tablet-screen) {
+                    order: 1;   
+                }
+                h3 {
+                    color: #FFF;
+                    font-size: 48px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 65px;
+                    margin-bottom: 22px;
+                    margin-top: 16px;
+                }
+
+                p {
+                    color: #FFF;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px;
+                    margin-bottom: 52px;
+                }
+
+                .actions {
+                    display: flex;
+                    gap: 21px;
+                    flex-wrap: wrap;
+
+                    @media (max-width: $tablet-screen) {
+                        justify-content: center;
+                    }
+
+                    .btn {
+                        font-size: 24px;
+                        font-weight: 400;
+                        padding: 17px 58px;
+                        color: white;
+
+                        &.signup {
+                        }
+
+                        &.demo {
+                            border-color: rgba(255, 255, 255, 0.30);
+                            padding: 17px 54px;
+                        }
+                    }
+                }
+            }
+
+            img.right {
+                max-width: 50%;
+
+                @media (max-width: $mobile-screen) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
